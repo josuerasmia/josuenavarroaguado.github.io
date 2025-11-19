@@ -98,7 +98,18 @@ function App() {
           <section className="bg-white rounded-lg shadow-sm p-6" aria-labelledby="about-heading">
             <h3 id="about-heading" className="text-xl font-semibold text-gray-900 mb-4">About</h3>
             <p className="text-gray-600 leading-relaxed">
-              I am a seasoned Solutions Architect with over 10 years of experience in the IT industry, driven by a commitment to innovation and continuous learning. I have designed, developed, and delivered solutions across diverse domains, consistently aligning technology with business outcomes.
+              {(() => {
+                      const startDate = new Date('2015-06-01'); // Jun 2015
+                      const endDate = new Date(); // Present
+                      const diffMs = endDate.getTime() - startDate.getTime();
+                      const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+                      const diffYears = Math.floor(diffDays / 365);
+                      return (
+                        <span>
+                          I am a seasoned Solutions Architect with over {diffYears} years of experience in the IT industry, driven by a commitment to innovation and continuous learning. I have designed, developed, and delivered solutions across diverse domains, consistently aligning technology with business outcomes.
+                        </span>
+                      );
+                    })()}
               <br /><br />
               <b>Specialties</b><br />
               • Software Architecture — Proficient in SOLID principles, Clean Architecture, Domain-Driven Design (DDD), and design patterns for scalable, modular solutions.<br />
