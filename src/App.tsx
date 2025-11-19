@@ -138,7 +138,7 @@ function App() {
                   <h4 className="font-semibold text-gray-900">Solutions Architect</h4>
                   <p className="text-gray-600">Rasmia Alianza Tecnológica SL • Full-time</p>
                     {(() => {
-                      const startDate = new Date('2022-10-01'); // Oct 2020
+                      const startDate = new Date('2022-10-01'); // Oct 2022
                       const endDate = new Date(); // Present
                       const diffMs = endDate.getTime() - startDate.getTime();
                       const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
@@ -146,7 +146,7 @@ function App() {
                       const diffMonths = Math.floor((diffDays % 365) / 30);
                       return (
                         <p className="text-gray-500 text-sm">
-                          Oct 2020 - Present • {diffYears} years{diffMonths > 0 ? ` ${diffMonths} months` : ''}
+                          Oct 2022 - Present • {diffYears} years{diffMonths > 0 ? ` ${diffMonths} months` : ''}
                         </p>
                       );
                     })()}
@@ -165,7 +165,19 @@ function App() {
                 <div>
                   <h4 className="font-semibold text-gray-900">Solutions Architect</h4>
                   <p className="text-gray-600">Yoshua.pro</p>
-                  <p className="text-gray-500 text-sm">Sep 2020 - Present • 4 years 5 months</p>
+                   {(() => {
+                      const startDate = new Date('2020-09-01'); // Sep 2020
+                      const endDate = new Date(); // Present
+                      const diffMs = endDate.getTime() - startDate.getTime();
+                      const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+                      const diffYears = Math.floor(diffDays / 365);
+                      const diffMonths = Math.floor((diffDays % 365) / 30);
+                      return (
+                        <p className="text-gray-500 text-sm">
+                          Sep 2020 - Present • {diffYears} years{diffMonths > 0 ? ` ${diffMonths} months` : ''}
+                        </p>
+                      );
+                    })()}
                   <p className="text-gray-500 text-sm">Remote</p>
                   <p className="text-gray-700 leading-relaxed text-sm mt-3">I provide expert guidance to deliver scalable, high-quality solutions by tailoring technologies and architectural frameworks to meet diverse project needs. My expertise includes clean architecture, microservices, cloud-native solutions, CI/CD pipelines, and modular software design. I excel in frontend and backend development, creating responsive and maintainable systems. With strong collaboration, problem-solving skills, and a commitment to continuous learning, I ensure adaptable, future-proof solutions aligned with project goals.</p>
                 </div>
